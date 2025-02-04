@@ -26,11 +26,11 @@ const playIcon = document.getElementById("play-icon");
 function toggleMusic() {
   if (audio.paused) {
     audio.play();
-    playIcon.src = "./img/volume_off.png";
+    playIcon.src = "./img/volume_up.png";
     playIcon.style.transform = "rotate(360deg)";
   } else {
     audio.pause();
-    playIcon.src = "./img/volume_up.png";
+    playIcon.src = "./img/volume_off.png";
     playIcon.style.transform = "rotate(0deg)";
   }
 }
