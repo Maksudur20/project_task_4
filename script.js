@@ -18,3 +18,21 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 updateTime();
+
+const playButton = document.getElementById("play");
+const audio = new Audio("./img/audio.mp3");
+const playIcon = document.getElementById("play-icon");
+
+function toggleMusic() {
+  if (audio.paused) {
+    audio.play();
+    playIcon.src = "./img/volume_off.png";
+    playIcon.style.transform = "rotate(360deg)";
+  } else {
+    audio.pause();
+    playIcon.src = "./img/volume_up.png";
+    playIcon.style.transform = "rotate(0deg)";
+  }
+}
+
+playButton.addEventListener("click", toggleMusic);
